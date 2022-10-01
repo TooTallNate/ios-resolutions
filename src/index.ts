@@ -1,4 +1,4 @@
-import { readFileSync } from 'fs';
+import data from '../data.json';
 
 export interface Device {
 	familyModel: string;
@@ -17,8 +17,7 @@ export interface Screen {
 	height: number;
 }
 
-const dataFilePath = new URL('../data.json', import.meta.url);
-export const devices: Device[] = JSON.parse(readFileSync(dataFilePath, 'utf8'));
+export const devices: Device[] = data;
 
 export function guessDevice(
 	screen: Screen,
