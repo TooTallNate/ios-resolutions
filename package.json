@@ -6,11 +6,10 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "build": "tsc && ts-node scripts/scrape.ts"
+    "build": "ts-node scripts/scrape.ts && tsc"
   },
   "files": [
-    "dist",
-    "data.json"
+    "dist"
   ],
   "keywords": [
     "iPhone",

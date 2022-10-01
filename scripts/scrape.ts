@@ -26,4 +26,6 @@ const data = rows.toArray().map(row => {
     return rowData;
 });
 
-await fs.promises.writeFile('data.json', JSON.stringify(data, null, 2));
+const dataPath = new URL('../src/data.ts', import.meta.url);
+const dataSource = `export default ${JSON.stringify(data, null, 2)}`;
+await fs.promises.writeFile(dataPath, dataSource);
