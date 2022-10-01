@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "module": "Node16",
+    "target": "es2021",
+    "moduleResolution": "Node16",
+    "lib": ["esnext"],
+    "outDir": "dist",
+    "sourceRoot": "src",
+    "sourceMap": true,
+    "declaration": true,
+    "allowSyntheticDefaultImports": true,
+  },
+  "include": ["./src/*.ts"],
+  "exclude": ["node_modules"],
+  "ts-node": {
+    "swc": true, // https://typestrong.org/ts-node/docs/swc/
+    "esm": true,
+  }
+}
