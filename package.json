@@ -1,7 +1,7 @@
 {
   "name": "@tootallnate/ios-resolutions",
   "type": "module",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Attempts to guess iOS device model based on screen resolutions.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
