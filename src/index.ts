@@ -22,13 +22,12 @@ export const devices: Device[] = JSON.parse(readFileSync(dataFilePath, 'utf8'));
 
 export function guessDevice(
 	screen: Screen,
-	devicePixelRatio?: number
+	devicePixelRatio = 1
 ): Device | undefined {
 	const device = devices.find((dev) => {
 		return (
-			screen.width === dev.logicalWidth &&
-			screen.height === dev.logicalHeight &&
-			(devicePixelRatio ? devicePixelRatio === dev.ppi : true)
+			screen.width * devicePixelRatio === dev.physicalWidth &&
+			screen.height * devicePixelRatio === dev.physicalHeight
 		);
 	});
 	return device;
